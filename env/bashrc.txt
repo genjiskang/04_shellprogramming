@@ -1,0 +1,42 @@
+# .bashrc
+
+# User specific aliases and functions
+
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+#
+# Sfecific configuration
+#
+export PS1='\[\e[34;1m\][\u@\h\[\e[33;1m\] \w]\$ \[\e[m\]'
+
+#
+# DNS Alias
+#
+alias named.conf='vi /etc/named.conf'
+alias named.rfc1912.zones='vi /etc/named.rfc1912.zones' 
+alias DNS='cd /var/named'
+alias dnslog='tail -f /var/log/messages'
+alias c='clear'
+alias e='exportfs -v'
+alias fwlist='firewall-cmd --list-all'
+alias fwcmd='filewall-cmd'
+alias fwreload='firewall-cmd --reload'
+alias tree='env LANG=C tree'
+alias nstate='ps -ef | head -1 ; ps -ef | grep $1'
+alias vi='/usr/bin/vim'
+
+alias vscode='code --no-sandbox --user-data-dir ~/workspace'
+#alias aa='vi /etc/vsftpd/vsftpd.conf'
+
+#
+#vscode
+#
+alias aa='chmod 700 /root/bin/*.sh'
+
